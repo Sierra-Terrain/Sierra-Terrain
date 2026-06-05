@@ -470,13 +470,13 @@ textarea {
 
 .process-steps {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 18px;
 }
 
 .process-steps article {
   min-height: 270px;
-  padding: 28px;
+  padding: 24px;
   background: var(--paper);
   border: 1px solid var(--line);
 }
