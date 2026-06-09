@@ -238,6 +238,10 @@
               <span>Email address</span>
               <input name="email" type="email" autocomplete="email" required />
             </label>
+            <label class="wide">
+              <span>Project address</span>
+              <input name="address" type="text" autocomplete="street-address" required />
+            </label>
             <label>
               <span>Project location</span>
               <select name="location" required>
@@ -273,6 +277,27 @@
         </div>
       </section>
     </main>
+
+    <div class="thank-you-overlay" data-thank-you-overlay hidden>
+      <div
+        class="thank-you-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="thank-you-title"
+        aria-describedby="thank-you-copy"
+      >
+        <button class="thank-you-close" type="button" data-thank-you-close aria-label="Close thank you message">
+          Close
+        </button>
+        <p class="section-label">Request sent</p>
+        <h2 id="thank-you-title">Thank you.</h2>
+        <p id="thank-you-copy">
+          Your estimate request was sent to Sierra Terrain. We will review your project details
+          and follow up soon.
+        </p>
+        <button class="button button-primary" type="button" data-thank-you-close>Done</button>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <a class="brand" href="#top" aria-label="Sierra Terrain home">

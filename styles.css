@@ -37,6 +37,10 @@ body.nav-open {
   overflow: hidden;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -593,6 +597,69 @@ textarea {
 
 .form-status.is-error {
   color: #ffd4c4;
+}
+
+.thank-you-overlay {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(10, 16, 12, 0.74);
+  backdrop-filter: blur(10px);
+}
+
+.thank-you-overlay[hidden] {
+  display: none;
+}
+
+.thank-you-dialog {
+  position: relative;
+  width: min(540px, 100%);
+  padding: clamp(30px, 5vw, 48px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.thank-you-dialog .section-label {
+  color: var(--rust);
+}
+
+.thank-you-dialog h2 {
+  margin: 8px 0 0;
+  font-family: var(--serif);
+  font-size: clamp(3rem, 8vw, 4.6rem);
+  line-height: 0.98;
+}
+
+.thank-you-dialog p:not(.section-label) {
+  margin: 18px 0 28px;
+  color: var(--ink-soft);
+}
+
+.thank-you-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  background: var(--paper-soft);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.thank-you-close:hover,
+.thank-you-close:focus-visible {
+  border-color: var(--rust);
 }
 
 .site-footer {
